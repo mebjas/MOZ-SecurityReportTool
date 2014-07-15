@@ -1,0 +1,9 @@
+{
+  "name": "securityreporttool",
+  "fullName": "Security-Report-Tool",
+  "id": "jid1-e24qUvdVv69HNQ",
+  "description": "A basic add-on to collect and report all security error in a website at one place in the browser",
+  "author": "PATIL Kailas",
+  "license": "MPL 2.0",
+  "version": "0.1"
+}

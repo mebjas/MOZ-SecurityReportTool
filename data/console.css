@@ -1,0 +1,66 @@
+header
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 5px 10px;
+    border-bottom: 1px solid silver;
+    background: white;
+    z-index: 2;
+}
+header button
+{
+	float: right;
+	cursor: pointer;
+	padding: 1px;
+}
+button.last
+{
+	margin-right: 20px
+}
+.console 
+{
+	margin-top: 40px;
+}
+.console div
+{
+	font-family: Calibri;
+	font-size: 10pt;
+	border-left: 5px solid silver;
+	padding: 2px 5px 2px 2px;
+	margin: 0px;
+}
+.console div div img
+{
+	margin-right: 5px;
+}
+.console div div.message
+{
+	display: inline-block;
+	border: none;
+	width: 80%;
+}
+.console div div.link
+{
+	display: inline-block;
+	border: none;
+	float: right;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	max-width: 16%;
+	max-height: 12px;
+	text-align: right;
+}
+.console a
+{
+	color: #0086b3;
+}
+.console a.right {
+	float: right;
+	margin-right: 20px;
+}
+a:hover
+{
+	text-decoration: underline;
+}

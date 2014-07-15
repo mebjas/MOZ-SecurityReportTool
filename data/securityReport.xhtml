@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title>Security Report Tool</title>
+        <link href="tabs.css" rel="stylesheet" type="text/css" />
+        <script src="securityReport.js"></script>
+        <script>
+            var previousTabId = 1;
+        </script>
+    </head>
+
+    <body>
+<!--      <splitter class="devtools-side-splitter"/>
+      <tabbox id="mytool-sidebar" class="devtools-sidebar-tabs" hidden="true">
+        <tabs/>
+        <tabpanels flex="1" />
+      </tabbox>-->
+       <div class="content">
+           <ol id="toc">
+               <li id="csp" class="current"><a  href="#" onclick="changeReportLogs(this, 1);">CSP</a></li>
+               <li id="insec-passwd"><a  href="#" onclick="changeReportLogs(this, 2);">Insec-Passwd</a></li>
+               <li id="mixed-content"><a  href="#" onclick="changeReportLogs(this, 3);">Mixed-Content</a></li>
+               <li id="ssl"><a  href="#" onclick="changeReportLogs(this, 4);">SSL</a></li>
+               <li id="sec-headers"><a  href="#" onclick="changeReportLogs(this, 5);">Sec-Headers</a></li>
+           </ol>
+           
+           <div id='logMsg'>
+             <!--  <select multiple='multiple' id='securityLogList' style='width:100%'> 
+                   <option> Hi </option>
+               </select> --> 
+             <textarea id="logTextarea" name="something" rows="5" style="width:100%"> </textarea>
+           </div>
+           <div style="background:#539dcb; padding:4px; margin:3px; margin-bottom:0px; color: #FFFFFF; border: 1px solid #CCCCCC; border-bottom: 0px;">
+           <div style="float:right; color: #d5d5d5; text-align:right">(By-default security report is stored on Desktop)</div>
+            <label onclick="downloadSecurityReport();">Download a detailed security report: </label> <img src="images/sec_report_download.png" alt="" width="20" height="20" onclick="downloadSecurityReport();" />          
+           </div>          
+       </div> <!-- DIV class 'Content' ends here -->
+        
+    </body>
+
+</html>
