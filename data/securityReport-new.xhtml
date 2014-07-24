@@ -5,14 +5,16 @@
 
 <head>
 	<title>Security Report Tool</title>
+    <link href="console.css" rel="stylesheet" type="text/css" />
+    <script src="jquery-1.11.1.min.js"></script>
     <script src="securityReport-new.js"></script>
-    <link href="console.css" rel="stylesheet" type="text/css" />     
-</head>
+</head>   
 
 <body>
     <header>
     	<button id="exportResults" class="last" onclick="downloadSecurityReport();">Export Results</button>
-    	<button id="exportResults" onclick="secConsole.clear();">Clear</button>  	
+    	<button id="exportResults" onclick="secConsole.clear();">Clear</button>
+        <button id="testcsp" onclick="testCSP();">Test CSP</button>	
     </header>
     <section>
     	<div class="console"></div>

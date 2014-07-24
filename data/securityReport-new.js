@@ -18,9 +18,26 @@ function downloadSecurityReport() {
 	// Logged to console from securityReportUI.js
 }
 
-/*
-function openSecurityReport() {
-	var event = new CustomEvent("openSecReport-msg");
-	document.documentElement.dispatchEvent(event);
+function testCSP() {
+	var event = new CustomEvent("test-csp");
+	document.documentElement.dispatchEvent(event);	
 }
-*/
+
+$(document).ready(function() {
+	$(document).on('click', '.min', function() {
+		var state = $(this).attr("state");
+		if (state == 'min') {
+			// Means maximise it;
+			$(this).next().next().next('.hidden').slideDown();
+			$(this).html(' [-] ');
+			$(this).attr('title', 'View Less');
+			$(this).attr('state', 'max');
+		} else {
+			// Means minimize it;
+			$(this).next().next().next('.hidden').slideUp();
+			$(this).html(' [+] ');
+			$(this).attr('title', 'View More');
+			$(this).attr('state', 'min');
+		}
+	});
+});

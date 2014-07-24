@@ -71,6 +71,7 @@ a:hover
 	color: white;
 	padding: 1px 5px;
 	border-radius: 4px;
+	margin-right: 10px;
 }
 .high {
 	background: rgb(219, 26, 26);
