@@ -26,10 +26,13 @@ button.last
 .console div
 {
 	font-family: Calibri;
-	font-size: 10pt;
-	border-left: 5px solid silver;
+	font-size: 12pt;
 	padding: 2px 5px 2px 2px;
 	margin: 0px;
+	margin-bottom: 1px;
+}
+.bleft {
+	border-left: 5px solid silver;
 }
 .console div div img
 {
@@ -39,18 +42,7 @@ button.last
 {
 	display: inline-block;
 	border: none;
-	width: 80%;
-}
-.console div div.link
-{
-	display: inline-block;
-	border: none;
-	float: right;
-	overflow-x: hidden;
-	overflow-y: hidden;
-	max-width: 16%;
-	max-height: 12px;
-	text-align: right;
+	width: 90%;
 }
 .console a
 {
@@ -63,4 +55,39 @@ button.last
 a:hover
 {
 	text-decoration: underline;
+}
+.min {
+	color: rgb(21, 156, 219);
+	cursor: pointer;
+}
+.min:hover {
+	color: rgb(20, 20, 209);
+}
+.overview {
+	border-left: none;
+	display: inline;
+}
+.category {
+	color: white;
+	padding: 1px 5px;
+	border-radius: 4px;
+}
+.high {
+	background: rgb(219, 26, 26);
+}
+.medium {
+	background: rgb(224, 161, 26);
+}
+.low {
+	background: rgb(143, 135, 128);
+}
+.hidden {
+	display: none;
+}
+.hidden div .header {
+	background: rgb(37, 121, 228);
+	color: white;
+	padding: 1px 5px;
+	margin-right:10px;
+	border-radius: 2px;
 }
