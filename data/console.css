@@ -1,5 +1,6 @@
 header
 {
+    font-family: monospace;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -8,6 +9,8 @@ header
     border-bottom: 1px solid silver;
     background: white;
     z-index: 2;
+    -moz-box-shadow: 0px 0px 25px black;
+    box-shadow: 0px 0px 25px black;
 }
 header button
 {
@@ -25,8 +28,8 @@ button.last
 }
 .console div
 {
-	font-family: Calibri;
-	font-size: 12pt;
+	font-family: monospace;
+	font-size: 9pt;
 	padding: 2px 5px 2px 2px;
 	margin: 0px;
 	margin-bottom: 1px;
@@ -84,11 +87,23 @@ a:hover
 }
 .hidden {
 	display: none;
+	padding-top: 20px;
+	border-bottom: 1px dashed silver;
 }
 .hidden div .header {
 	background: rgb(37, 121, 228);
 	color: white;
 	padding: 1px 5px;
-	margin-right:10px;
+	margin-right: 10px;
 	border-radius: 2px;
+}
+.reference ul {
+	list-style-type: square;
+	padding-left: 20px;
+	margin: 4px;
+}
+.color {
+	width: 10px;
+	height: 10px;
+	display: inline-block;
 }
