@@ -1,6 +1,6 @@
 header
 {
-    font-family: monospace;
+    font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
     position: fixed;
     top: 0px;
     left: 0px;

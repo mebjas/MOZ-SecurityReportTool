@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Security Report Tool</title>
+    <link href="console.css" rel="stylesheet" type="text/css" />     
+</head>
+
+<body>
+    <header>
+        <strong>Severety:&nbsp;&nbsp;</strong>
+        <span class="color" style="background: rgb(219, 26, 26);"> </span> High 
+        <span class="color" style="background: rgb(224, 161, 26);"> </span> Medium 
+        <span class="color" style="background: rgb(143, 135, 128);"> </span> Low 
+
+    	<button id="exportResults" class="last" onclick="downloadSecurityReport();">Export Results</button>
+    	<button id="openResults" onclick="openSecurityReport();">Open Reports</button>
+    	<button id="exportResults" onclick="secConsole.clear();">Clear</button>  	
+    </header>
+    <section>
+    	<div class="console">
+            <div class="bleft">
+                <div class="message">
+                    <span class="min" state="min" title="View More"> [+] </span>
+                    <span class="category high">SSL Error</span>
+                    <span class="overview">SSL Certificates have expired for this site</span>
+                    <div class="hidden">
+                        <div class="insight">
+                            <span class="header">Insight</span>
+                        </div>
+                        <div class="impact">
+                            <span class="header">Impact</span>
+                        </div>
+                        <div class="fix">
+                            <span class="header">Fix</span>
+                        </div>
+                        <div class="reference">
+                            <span class="header">Reference</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bleft">
+                <div class="message">
+                    <span class="min" state="min" title="View More" style="color:red"> [-] </span>
+                    <span class="category high">Content Security Policy</span>
+                    <span class="overview">This web page is missing the Content-Security-Policy header!</span>
+                    <div class="hidden" style="display:block;margin-top:10px">
+                        <div class="insight">
+                            <span class="header">Insight</span>
+                            Lack of normal behavior policy for content loaded  and executed by the web page and can be exploited by attackers to load or execute malicious injected content.
+                        </div>
+                        <div class="impact">
+                            <span class="header">Impact</span>
+                            Successful exploitation will allow remote attackers to execute arbitrary code or steal sensitive information such as cookies, authentication token, etc., or bypass the authentication mechanism.
+                        </div>
+                        <div class="fix">
+                            <span class="header">Fix</span>
+                            Use Content Security Policy header to protect your website's users from content injection attacks, such as Cross-Site Scripting. The UserCSP extension of Firefox is useful tool to find most compatible policy for a web page
+                        </div>
+                        <div class="reference">
+                            <span class="header">Reference</span>
+                            <ul>
+                            	<li> CSP 1.0 W3C Candidate Recommendation (http://www.w3.org/TR/CSP/)</li>
+                            	<li> CSP 1.1 Editor's Draft (https://dvcs.w3.org/hg/content-security-policy/raw-file/tip/csp-specification.dev.html)</li>
+                            	<li> URL:https://people.mozilla.org/~bsterne/content-security-policy/</li>
+                            	<li> URL:https://developer.mozilla.org/en-US/docs/Security/CSP/Introducing_Content_Security_Policy</li>
+                            	<li> URL:http://en.wikipedia.org/wiki/Content_Security_Policy</li>
+                            	<li>URL:https://addons.mozilla.org/en-us/firefox/addon/newusercspdesign/</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bleft">
+                <div class="message">
+                    <span class="min" state="min" title="View More"> [+] </span>
+                    <span class="category medium">Insecure Cookie</span>
+                    <span class="overview">The web page cookies are not set with the HttpOnly flag!</span>
+                    <div class="hidden">
+                       <div class="insight">
+                            <span class="header">Insight</span>
+                        </div>
+                        <div class="impact">
+                            <span class="header">Impact</span>
+                        </div>
+                        <div class="fix">
+                            <span class="header">Fix</span>
+                        </div>
+                        <div class="reference">
+                            <span class="header">Reference</span>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="bleft">
+                <div class="message">
+                    <span class="min" state="min" title="View More"> [+] </span>
+                    <span class="category low">Missing HTTPS Version</span>
+                    <span class="overview"> TWeb page is not using HTTPS version or fails to redirect to HTTPS when users visited non-secure (HTTP) version.</span>
+                    <div class="hidden">
+                        <div class="insight">
+                            <span class="header">Insight</span>
+                        </div>
+                        <div class="impact">
+                            <span class="header">Impact</span>
+                        </div>
+                        <div class="fix">
+                            <span class="header">Fix</span>
+                        </div>
+                        <div class="reference">
+                            <span class="header">Reference</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+    <div id="downloadSecReport"></div>     
+</body>
+<script src="jquery-1.11.1.min.js"></script>
+<script src="securityReport-new.js"></script>
+</html>
